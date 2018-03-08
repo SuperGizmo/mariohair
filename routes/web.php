@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/{page}', function ($page) {
+    
+    $page = str_replace(".html", "", $page);
+    
     return redirect('https://www.alessandrohairstudio.co.uk/'.$page);
 });
