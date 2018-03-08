@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('https://www.alessandrohairstudio.co.uk/');
+    return redirect('https://www.alessandrohairstudio.co.uk/', 301);
 });
 
 Route::get('/{page}', function ($page) {
@@ -20,5 +20,5 @@ Route::get('/{page}', function ($page) {
     $page = str_replace(".html", "", $page);
     $page = str_replace("Home", "", $page);
     
-    return redirect('https://www.alessandrohairstudio.co.uk/'.$page);
+    return redirect('https://www.alessandrohairstudio.co.uk/'.$page, 301);
 });
